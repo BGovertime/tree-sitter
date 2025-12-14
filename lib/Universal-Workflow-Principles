@@ -1,0 +1,734 @@
+Universal-Workflow-Principles
+1️⃣ Prioritize the tools.
+VS Code→ Used as the primary IDE for development and documenting code/manuals.
+GitHub→ Maintain standard repositories, version control, and workflows.
+Week→ Used as living documentation for manuals and references.
+Note→ Record short ideas or to-do lists using quick capture.
+Docs→ Complete summaries of research papers, reports, and manuals.
+Cloud (recommended)→ Store the original file and additional data (OneDrive/Google Drive)
+Sources of information and social media (finally)→ Used for publishing and sharing results.
+
+2️⃣ Steps in the process (Workflow Loop)
+Analyze and create content.
+Use VS Code + Note → draft and prototype.
+Save and control versions.
+Commit to GitHub → Use the branch for the new project.
+Explain and link the information.
+Update Wiki → Sub-guide + query reference
+Summarize and archive.
+Docs → Full Report
+Cloud → Stores the original files.
+Share and present.
+Zoom + Email → Meetings, sending summaries, notifications
+Social → Published when ready.
+Loop
+Every day involves summarizing and planning.
+Review and update the repository every year.
+
+3️⃣ Daily Calendar Loop
+time
+activity
+tool
+09:00 – 12:00
+Analyze/write code/record ideas
+VS Code, Note
+12:00 – 13:00
+Take a break/Review
+—
+13:00 – 15:00
+Commit + Update Wiki/Docs
+GitHub, Wiki, Docs
+20:00 – 21:00
+Daily task summary
+Docs, Note
+21:00 – 22:00
+Plan for the next day + Zoom meeting
+Email, Zoom
+
+
+4️⃣ System Integration
+Email + Calendar→ Automatic daily summary delivery, Zoom meeting scheduling.
+Zoom→ Use the time period of 21:00–22:00 for team syncing.
+GitHub Actions→ Automatically update Wiki/Docs when a commit occurs.
+Cloud Sync→ Keep the original files and link them with Docs.
+
+5️⃣ Annual work loop
+every day→ Analyze → Commit → Summarize → Plan
+every month→ Review repository + Wiki → Update information
+Every year→ System-wide audit → Improve workflow → Start the loop again
+
+How it works
+TriggerEvery time there is a commit on a branch.mainOr press manual run.
+step:
+Checkout repository
+Set up Git for the bot.
+Copy files from docs/Go to the Wiki repository (.wiki)
+Commit and push to Wiki repo.
+resultThe Wiki will automatically update to match the documentation whenever there is a commit.
+
+🌐 Key features of this template:
+Reusable every year (same standard).
+Real-time updates when a commit occurs.
+Supports manual triggers for special syncs.
+Reduce redundancy: Docs are the primary source of information, Wiki is a mirror for reference.
+
+Docs/Wiki folder structure (standard package)
+repository/
+├── docs/ # Main Documents (Docs)
+│   ├── project-A/
+│ │ ├── overview.md # Project Overview
+│ │ ├── checklist.md # Checklist of data to be collected
+│ │ ├── summary.yaml # Structured data summary
+│ │ └── references.md # Sources/Reference Links
+│   ├── project-B/
+│   │   ├── overview.md
+│   │   ├── checklist.md
+│   │   ├── summary.yaml
+│   │   └── references.md
+│ └── templates/ # Standard templates
+│       ├── checklist-template.md
+│       ├── summary-template.yaml
+│       └── overview-template.md
+│
+├── wiki/ # Wiki (mirror of Docs)
+│   ├── project-A.md
+│   ├── project-B.md
+│ └── index.md # Index for all projects
+│
+├── queries/ # Query warehouse for retrieving data
+│   ├── project-A/
+│   │   └── analysis.sql
+│   └── project-B/
+│       └── analysis.sql
+│
+└── main-repo.md # Large box (overall overview)
+
+
+✅ Standard Checklist (Checklist Template)
+# Project Checklist
+
+## Basic Information
+- [ ] Project ID
+- [ ] Project Title
+- [ ] Author/Owner
+- [ ] Version
+- [ ] Last Updated
+
+## Main Content
+- [ ] Overview (Project Overview)
+- [ ] Objectives (Purpose)
+- [ ] Key Findings (Main Analysis Results)
+- [ ] Next Steps (Next steps plan)
+
+## Additional Information
+- [ ] References (Sources/Links)
+- [ ] Queries (data retrieval commands)
+- [ ] Attachments (Original file/Cloud link)
+
+## Verification
+- [ ] Commit to GitHub
+- [ ] Sync to Wiki
+- [ ] Reviewed by Team
+
+
+🔄 How to use in Workflow
+Create a new project.→ Copytemplates/Go to the project folder.
+Fill out the checklist.→ Fill in the information.checklist.mdTo be complete.
+Summary Notes→ Usesummary.yamlFor metadata and data structures.
+Commit→ Push to GitHub → Actions will automatically sync to the Wiki.
+Trace back→ Use the Wiki + checklist to check the project's completeness.
+
+✨ Highlights of this package
+have Standard templateFor every project → Reduce confusion.
+A checklist helps prevent data loss → Easy to verify.
+Wiki mirroring makes it easy to review information → Use it as a reference in conjunction with documentation.
+Queries are clearly separated → Data can be retrieved repeatedly without copying files.
+📘 User Manual
+GuideBlueprint:
+id: string # Guide ID, e.g., "streaming-module"
+title: string # Guide title, e.g., "Streaming Module Usage Guide"
+description: string # Short description (in Thai)
+version: string # version, e.g., "v1.0"
+author: string # Author/Administrator
+last_updated: date # Last modified date
+commands: Command[] # List of commands actually used
+ethics_banner: string # Safety and ethics banner
+
+Command:
+name: string # Command name, e.g., "Start Streaming"
+syntax: string # Usage format, e.g., "npm run stream"
+description: string # Description (Thai)
+example: string # Real-world example usage
+
+🏷️ Title & Description Template
+TitleUse the module or topic name, for example:
+
+
+Streaming Module Usage Guide
+Magic Button Quick Reference
+DescriptionBriefly explain what this manual is for, for example:
+
+
+"This guide describes how to use the Streaming module for presenting and sharing multi-stream data."
+"This guide provides instructions on using the Magic Button to capture ideas and inspiration."
+
+⚖️ Principles of Data Use
+Accuracy
+Use the information as recorded in the manual; do not modify it without verification.
+Transparency
+Always indicate the source of information and provide references.
+Responsibility
+Users are responsible for the consequences of using the data.
+Safety
+Do not use this information to violate the rights of, misrepresent, or harm others.
+Ethics
+Use data for development, learning, and innovation, not for destruction.
+
+🚨 Ethics & Safety Banner
+⚠️ **Ethics & Safety Notice**
+
+The information in this guide is part of research and development.
+All users must adhere to the following principles:
+
+- Use the information accurately and transparently.
+- Take responsibility for the consequences.
+- Do not use this information for rights violations or harm.
+- Respect the ethics and safety of all parties.
+
+By accessing and using this information, the user agrees to these terms.
+
+Git Team Workflow Guide
+Title
+Git Team Workflow Guide: Pull Request, Code Review, and CI/CD Integration
+Description
+This guide describes the use of Git at the team level, focusing on collaboration through pull requests, code review, and integration with CI/CD systems to ensure project development is standardized, transparent, and easily traceable.
+
+Scope of Use
+Pull Request (PR)
+
+
+Used to propose changes from a sub-branch to the main branch.
+This marks the beginning of collaboration and code review.
+Code Review
+
+
+The team reviewed the code proposed in the PR.
+Reduce errors, improve quality, and build mutual understanding.
+CI/CD Integration
+
+
+Use GitHub Actions or GitLab CI to inspect and automate deployments.
+It streamlines the workflow and reduces manual work.
+
+Important commands and procedures (Team Workflow Commands)
+# 1. Create a branch for a new task.
+git checkout -b feature/streaming-module
+
+#2. Get to work and commit.
+git add .
+git commit -m "Add streaming module feature"
+
+# 3. Push branch to remote.
+git push origin feature/streaming-module
+
+# 4. Create a Pull Request (via GitHub/GitLab UI)
+# - Select the branch you want to merge into main.
+# - Enter details of the change.
+
+# 5. Code Review
+# - Reviewers check the code and suggest fixes.
+# - Use comments in PR to communicate.
+
+#6. Merge PR
+git checkout main
+git pull
+git merge feature/streaming-module
+git push origin main
+
+# 7. CI/CD Integration (GitHub Actions Example)
+# - When a push or merge occurs into the main group.
+# - The system will run tests and deploy automatically.
+
+
+Checklist for Team Workflow
+[ ] Create a new branch for each feature.
+[ ] Commit with a clear message.
+[ ] Push branch and create a Pull Request
+[ ] Reviewer checks the code and provides feedback.
+[ ] Merge PR after approval.
+[ ] CI/CD pipeline runs automatically (test + deploy)
+[ ] Sync Docs/Wiki after major changes.
+
+⚖️ Principles of Use
+Always use a Pull Request before merging into the main branch.
+Reviewers must examine the code transparently and provide constructive feedback.
+Use CI/CD to reduce errors from manual deployment.
+Maintain a clear and consistent commit message and PR description.
+Respect ethics and responsibility in collaborative work.
+
+Ethics & Safety Banner
+**Ethics & Safety Notice**
+
+Using Git at the team level requires following these principles:
+
+- Use Pull Requests and Code Reviews transparently.
+- Responsible for the results of merging and deploying.
+- Do not use workflows to hide changes or distort data.
+- Respect the ethics and safety of all parties.
+
+By accessing and using this information, the user agrees to these terms.
+
+
+GitHub Actions CI/CD Pipeline (YAML Example)
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+- main # This executes when there is a commit on the main branch.
+  pull_request:
+    branches:
+- main # This function executes when a PR is created in main.
+workflow_dispatch: # Can be triggered manually
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+#2. Setting up Node.js (Example for a JS/TS project)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Run build
+      - name: Build project
+        run: npm run build
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      # 5. Run tests
+      - name: Run tests
+        run: npm test
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      # 6. Run lint
+      - name: Run lint
+        run: npm run lint
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [test, lint]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+# 7. Deploy (Example using GitHub Pages or Cloud)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
+
+🔄 Workflow Explanation
+Build→ Check if the project can be built.
+Test→ Run unit/integration tests to verify accuracy.
+Lint→ Check code quality according to standards.
+Deploy→ If all steps are completed successfully, it will be deployed automatically (e.g., GitHub Pages or Cloud).
+
+Checklist for CI/CD Pipeline
+[ ] Specify the main branch to deploy (e.g.,main)
+[ ] Includes complete build, test, and lint procedures.
+[ ] Use secrets for sensitive information (e.g., API keys, tokens).
+[ ] Automatically deploy after PR is merged.
+[ ] Always check the results from the Actions dashboard.
+
+Ethics & Safety Banner
+**Ethics & Safety Notice**
+
+When using a CI/CD pipeline, the following principles must be followed:
+
+- Use pipelines to improve the quality and transparency of development.
+- Take responsibility for the results of automated deployment.
+- Do not use workflows to hide changes or deploy unverified applications.
+- Respect the ethics and safety of all parties.
+
+By accessing and using this pipeline, the user accepts these terms and conditions.
+
+
+
+GitHub Actions CI/CD Pipeline with Docker & Kubernetes
+name: CI/CD Pipeline with Docker & Kubernetes
+
+on:
+  push:
+    branches:
+- main # This executes when there is a commit on the main branch.
+  pull_request:
+    branches:
+- main # This function executes when a PR is created in main.
+workflow_dispatch: # Can be triggered manually
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Setup Docker
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      # 3. Login to Docker Registry
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # 4. Build and Push Docker Image
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/streaming-app:latest
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      # 5. Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 6. Setup kubectl
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: 'v1.28.0'
+
+# 7. Setup Kubeconfig (Connecting to the cluster)
+      - name: Configure Kubeconfig
+        run: |
+mkdir -p ~/.kube
+          echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+
+      # 8. Deploy to Kubernetes
+      - name: Deploy to Kubernetes
+        run: |
+          kubectl set image deployment/streaming-app streaming-app=${{ secrets.DOCKER_USERNAME }}/streaming-app:latest
+          kubectl rollout status deployment/streaming-app
+
+
+Workflow Explanation
+Build Stage
+
+
+Checkout repository
+Build Docker image
+Push the image to a Docker Registry (e.g., DockerHub, GHCR).
+Deploy Stage
+
+
+use kubectlConnect to a Kubernetes cluster.
+Update deployment with the latest Docker image.
+Check the rollout status to ensure the deployment was successful.
+
+Checklist for Docker/Kubernetes CI/CD
+[ ] Define secrets forDOCKER_USERNAME, DOCKER_PASSWORD, and KUBECONFIG
+[ ] There is a Dockerfile that clearly defines the build steps.
+[ ] Use the Kubernetes manifest (deployment.yaml, service.yaml) stored in the repo.
+[ ] Check the rollout status every time after deploying.
+[ ] Use separate namespaces for staging and production.
+
+Principles of Use
+Use a Docker image with an explicit tag (e.g.,v1.0.0) Not usedlatestIn production
+Use the Kubernetes namespace to separate environments (dev, staging, prod).
+Always check the rollout status to be sure.
+Use `secrets` for sensitive information, such as credentials and kubeconfig.
+Respect ethical considerations and safety when deploying to production.
+
+Ethics & Safety Banner
+**Ethics & Safety Notice**
+
+When using a CI/CD pipeline with Docker/Kubernetes, the following principles must be followed:
+
+- Use pipelines to improve the quality and transparency of deployment.
+- Take responsibility for the results of automated deployment.
+- Do not use workflows to deploy unverified or compromised systems.
+- Respect the ethics and safety of all parties.
+deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streaming-app
+  labels:
+    app: streaming-app
+spec:
+replicas: 3 # Number of pods to run
+  selector:
+    matchLabels:
+      app: streaming-app
+  template:
+    metadata:
+      labels:
+        app: streaming-app
+    spec:
+      containers:
+        - name: streaming-app
+image:your-docker-username/streaming-app:latest # Docker image built from CI/CD
+          ports:
+            - containerPort: 8080
+          env:
+            - name: NODE_ENV
+              value: "production"
+            - name: STREAMING_MODE
+              value: "multi"
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "500m"
+              memory: "1Gi"
+livenessProbe: # Check if the container is still running.
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+readinessProbe: # Checking if the container is ready for use.
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 5
+
+
+📄 service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: streaming-service
+  labels:
+    app: streaming-app
+spec:
+type: LoadBalancer # Use LoadBalancer to allow access from outside the cluster
+  selector:
+    app: streaming-app
+  ports:
+    - protocol: TCP
+port: 80 # A port open for external access.
+targetPort: 8080 # Internal port within container
+
+
+Workflow
+CI/CD PipelineI will build a Docker image and push it to the Docker Registry.
+DeploymentThis will retrieve the latest image and create the specified number of pods.
+ServiceThis will allow users to access the Streaming module via the Load Balancer.
+ProbesThis will help check the health and readiness of the container before actual service.
+
+Checklist for Kubernetes Deployment
+[ ] Set the appropriate replicas for the workload.
+[ ] Use resource requests/limits to control CPU/Memory usage.
+[ ] Define liveness and readiness probes for stability.
+[ ] Use LoadBalancer or Ingress for external access.
+[ ] Store secrets (e.g., API keys) in Kubernetes. Secret is not placed in the manifest.
+
+Ethics & Safety Banner
+**Ethics & Safety Notice**
+
+When using the Kubernetes manifest, the following principles must be followed:
+
+- Use transparent and verifiable configurations.
+- Responsible for the results of deploying to the production cluster.
+- Do not use the manifest to expose vulnerabilities or deploy unverified applications.
+- Respect the ethics and safety of all parties.
+
+By accessing and using this manifest, the user agrees to these terms and conditions.
+
+
+
+📄 ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: streaming-ingress
+  namespace: default
+  annotations:
+kubernetes.io/ingress.class: "nginx" # Use NGINX Ingress Controller
+cert-manager.io/cluster-issuer: "letsencrypt-prod" # Use cert-manager for TLS
+spec:
+  tls:
+    - hosts:
+- streaming.example.com # domain name used for access
+secretName: streaming-tls # secret TLS certificate repository
+  rules:
+    - host: streaming.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+name: streaming-service # Name of the service connected to the deployment
+                port:
+                  number: 80
+
+Workflow
+Ingress Controller (NGINX)→ Serves as a gateway for external access.
+Domain Name→ Specify the host, for example:streaming.example.com
+TLS/HTTPS→ Use cert-manager + Let's Encrypt to automatically issue certificates.
+Service Binding→ Ingress will forward traffic to...streaming-serviceRelated to deployment.
+
+Checklist for Ingress + HTTPS
+[ ] Install the Ingress Controller (e.g., NGINX Ingress Controller) in the cluster.
+[ ] Install cert-manager for managing TLS certificates.
+[ ] Configure the domain name and DNS record to point to the cluster's Load Balancer.
+[ ] Create a secret for the TLS certificate (streaming-tls)
+[ ] Verify that the service and deployment are available before launching Ingress.
+
+Principles of Use
+Always use HTTPS as the default for security.
+Verify that the TLS certificate is valid and not expired.
+Use a domain name that is clear and meaningful to users.
+Avoid opening unnecessary paths to reduce security risks.
+Respect the ethics and responsibility in providing information.
+
+Ethics & Safety Banner
+**Ethics & Safety Notice**
+
+When using the Ingress manifest, the following principles must be followed:
+
+- Use HTTPS to secure users and data.
+- Responsible for the results of providing services through a domain name.
+- Do not use Ingress to create vulnerabilities or access data without authorization.
+- Respect the ethics and safety of all parties.
+
+By accessing and using this manifest, the user agrees to these terms and conditions.
+
+
+cluster-issuer.yaml (Let’s Encrypt)
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+# URL for Let's Encrypt production
+    server: https://acme-v02.api.letsencrypt.org/directory
+Email: your-email@example.com # Email for certificate notification
+privateKeySecretRef:
+      name: letsencrypt-prod-private-key
+    solvers:
+      - http01:
+          ingress:
+class: nginx # Use NGINX Ingress Controller
+
+cluster-issuer-staging.yaml (for testing)
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-staging
+spec:
+  acme:
+# URL for Let's Encrypt staging (for testing before production)
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: your-email@example.com
+privateKeySecretRef:
+      name: letsencrypt-staging-private-key
+    solvers:
+      - http01:
+          ingress:
+            class: nginx
+Workflow
+Cluster Issuer→ Define the method for issuing certificates using Let's Encrypt's ACME protocol.
+Ingress manifest→ Specifycert-manager.io/cluster-issuer: "letsencrypt-prod"In annotations
+cert-manager→ It will automatically generate a TLS certificate and store it in the Kubernetes Secret().streaming-tls)
+Ingress Controller (NGINX)→ Use the Secret generated by cert-manager to provide HTTPS service.
+
+Checklist for using cert-manager
+[ ] Install cert-manager in the cluster (kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/vX.Y.Z/cert-manager.yaml)
+[ ] Create ClusterIssuer for both staging and production.
+[ ] Specify a valid email address to receive notifications about certificate expiration.
+[ ] Use staging issuer to test before deploying to production.
+[ ] Check if Ingress has an annotation.cert-manager.io/cluster-issuer correct
+Principles of Use
+Use a staging issuer before production to bypass Let's Encrypt's rate limit.
+Verify that the domain name and DNS record are correct before issuing the certificate.
+Use a valid email address to receive expiration notifications.
+Respect the security and responsibility of providing HTTPS services.
+Ethics & Safety Banner
+**Ethics & Safety Notice**
+
+When using cert-manager Cluster Issuer, the following principles must be followed:
+
+- Use a staging issuer for pre-production testing.
+- Responsible for the results generated by automated certificate issuance.
+- Do not use Cluster Issuer to issue certificates for unauthorized domains.
+- Respect the ethics and safety of all parties.
+
+By accessing and using this manifest, the user agrees to these terms and conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
